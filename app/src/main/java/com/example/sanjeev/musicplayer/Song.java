@@ -1,12 +1,12 @@
 package com.example.sanjeev.musicplayer;
 
+// Song Data Structure
 public class Song {
     private String song_name;
     private String artist_name;
     private String duration;
-    private int play_button_id;
 
-    public Song(String song_name, String artist_name, String duration) {
+    Song(String song_name, String artist_name, String duration) {
         this.song_name = song_name;
         this.artist_name = artist_name;
         this.duration = duration;
@@ -36,11 +36,4 @@ public class Song {
         this.duration = duration;
     }
 
-    public int getPlay_button_id() {
-        return play_button_id;
-    }
-
-    public void setPlay_button_id(int play_button_id) {
-        this.play_button_id = play_button_id;
-    }
 }

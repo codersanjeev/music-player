@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="72dp"
-    android:gravity="center_vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin72"
+    android:gravity="center_vertical">
     <TextView
-        android:textColor="#000000"
-        android:layout_marginStart="16dp"
-        android:gravity="center_vertical"
-        android:text="Song1"
         android:id="@+id/song_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin16"
+        android:gravity="center_vertical"
+        android:text="@string/song_name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text16"
+        tools:ignore="RelativeOverlap" />
     <TextView
-        android:textColor="#000000"
-        android:text="Artist1"
-        android:layout_marginStart="16dp"
         android:id="@+id/artist_name"
-        android:layout_below="@id/song_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:textColor="#000000"
-        android:layout_marginStart="16dp"
-        android:text="duration1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/duration"
         android:layout_below="@id/song_name"
-        android:layout_toEndOf="@id/artist_name"/>
+        android:layout_marginStart="@dimen/margin16"
+        android:text="@string/artist_name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text14" />
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_name"
+        android:layout_marginStart="@dimen/margin16"
+        android:layout_toEndOf="@id/artist_name"
+        android:text="@string/song_duration"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text14"/>
     <ImageButton
-        android:layout_marginRight="16dp"
-        android:background="@drawable/playbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        />
+        android:layout_marginEnd="@dimen/margin16"
+        android:background="@drawable/playbutton"
+        android:contentDescription="@string/list_button_desc" />
 </RelativeLayout>

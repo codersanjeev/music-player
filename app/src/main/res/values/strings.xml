@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MusicPlayer</string>
+    <string name="content_desc">Song Album Art</string>
+    <string name="song_name">Song Name Goes Here</string>
+    <string name="artist_name">Artist Name Goes Here</string>
+    <string name="previous_desc">Previous Song will be Played</string>
+    <string name="play_desc">Play or Pause current song</string>
+    <string name="next_desc">Plays the next song</string>
+    <string name="song_duration">01:32</string>
+    <string name="list_button_desc">Play Button</string>
 </resources>

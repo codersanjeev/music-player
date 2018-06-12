@@ -1,63 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-    android:layout_height="match_parent"
-    android:weightSum="3"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3">
+
     <ImageView
-        android:background="@drawable/song_art"
         android:id="@+id/song_image_art"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"/>
+        android:layout_height="@dimen/height0"
+        android:layout_weight="2"
+        android:background="@drawable/song_art"
+        android:contentDescription="@string/content_desc" />
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/height0"
         android:layout_weight="1">
+
         <TextView
-            android:background="#fafafa"
-            android:textColor="#000000"
-            android:gravity="center_horizontal"
-            android:text="Song Name Goes Here"
             android:id="@+id/song_name_display"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="36sp"/>
-        <TextView
-            android:background="#fafafa"
+            android:background="@color/player_activity_background_color"
             android:gravity="center_horizontal"
-            android:text="Artist Name Goes Here"
-            android:layout_below="@id/song_name_display"
+            android:text="@string/song_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text36" />
+
+        <TextView
             android:id="@+id/artist_name_display"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp"/>
+            android:layout_below="@id/song_name_display"
+            android:background="@color/player_activity_background_color"
+            android:gravity="center_horizontal"
+            android:text="@string/artist_name"
+            android:textSize="@dimen/text24" />
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/artist_name_display">
+            android:layout_below="@id/artist_name_display"
+            android:orientation="horizontal">
+
             <ImageButton
 
+                android:layout_width="@dimen/height0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/player_activity_background_color"
+                android:contentDescription="@string/previous_desc"
                 android:onClick="PreviousSong"
-                android:src="@drawable/previous"
-                android:background="#fafafa"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:src="@drawable/previous" />
+
             <ImageButton
-                android:onClick="PlaySong"
+                android:layout_width="@dimen/height0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="@drawable/play_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/play_desc"
+                android:onClick="PlaySong" />
+
             <ImageButton
-                android:onClick="NextSong"
-                android:background="#fafafa"
-                android:src="@drawable/next"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/height0"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:background="@color/player_activity_background_color"
+                android:contentDescription="@string/next_desc"
+                android:onClick="NextSong"
+                android:src="@drawable/next" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

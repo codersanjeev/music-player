@@ -35,17 +35,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view, int position) {
                 Song song = songsList.get(position);
-                Toast.makeText(getApplicationContext(), song.getSong_name() + " is selected!", Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(getApplicationContext(), SongPlayActivity.class);
                 intent.putExtra("SONG_NAME", song.getSong_name());
+                intent.putExtra("ARTIST_NAME", song.getArtist_name());
                 startActivity(intent);
             }
 
             @Override
             public void onLongClick(View view, int position) {
-                Toast.makeText(getApplicationContext(), "Long Click", Toast.LENGTH_LONG).show();
-
+                // DO nothing for now
             }
         }));
 

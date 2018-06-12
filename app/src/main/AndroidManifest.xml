@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SongPlayActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:label="Playing"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
